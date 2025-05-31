@@ -1,14 +1,15 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: "Exo 2", sans-serif;
 }
 
 header{
     display: flex;
-    background-color: rgb(0, 207, 207);
-    justify-content: space-around;
+    background-color: #20a7a7;
+    justify-content: flex-end;
     padding: 2.5em;
-    font-family: "Exo 2", sans-serif;
+    align-items: center;
 }
 
 header a{
@@ -16,6 +17,7 @@ header a{
     color: black;
     transition: 0.3s;
     font-size: 20px;
+    margin-left: 1em;
 }
 
 header a:hover{
@@ -27,6 +29,58 @@ header a:hover{
     font-weight: bold;
 }
 
+.MiniTVZ{
+    margin-right: auto;
+}
+
+.MiniTVZ:hover{
+    transform: none;
+}
+
+article{
+    padding: 100px;
+}
+
+article h1{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+article hr{
+    margin-bottom: 50px;
+    height: 1px;
+    background-color: black;
+    border: none;
+}
+
+.obavijesti{
+    display: flex;
+    justify-content: space-around;
+}
+
+.obavijestContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 300px;
+    text-align: left;
+    background-color: #d3d3d3;
+}
+
 footer{
     display: flex;
+    background-color: rgb(0, 143, 143);
+    padding: 2.5em;
+    font-size: 20px;
+    justify-content: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+.ig{
+    font-size: 25px;
 }
