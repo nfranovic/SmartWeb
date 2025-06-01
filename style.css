@@ -102,3 +102,37 @@ footer a{
 .ig{
     font-size: 25px;
 }
+
+.galerija{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.galerija img{
+    max-width: 400px;
+    height: 450px;
+    margin-top: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.button input{
+    background-color: cornflowerblue;
+    padding: 10px;
+    color: azure;
+    font-weight: bold;
+    font-size: 40px;
+    height: 70px;
+    width: 70px;
+    border: none;
+    border-radius: 11px;
+}
+
+.button input:hover{
+    background-color: rgb(85, 125, 199);
+}
