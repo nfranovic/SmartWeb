@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radionice - MiniTVZ</title>
+
+    <meta name="Author" content="SmartWeb">
+    <meta name="Description" content="MiniTVZ inicijativa">
+    <meta name="Keywords" content="Robotika, Radionice, TVZ, MiniTVZ">
+
+    <link rel="stylesheet" href="radionice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="https://i.postimg.cc/fbzwjc71/ZAMkwPA.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="https://i.postimg.cc/fbzwjc71/ZAMkwPA.png" alt="logo" height="40px">
+        <a href="index.html" class="minitvz">MiniTVZ</a>
+        <a href="onama.html">O nama</a>
+        <a href="radionice.html" class="aktivan">Radionice</a>
+        <a href="partneri.html">Partneri</a>
+        <a href="galerija.html">Galerija</a>       
+        <a href="faq.html">FAQ</a>    
+    </header>
+
+    <div class="glavni-sadrzaj">
+        <div class="sekcija-filtriranja">
+            <label for="filter-uzrasta">Filtriraj po uzrastu:</label>
+            <select id="filter-uzrasta">
+                <option value="">Svi uzrasti</option>
+                <option value="6-8">6-8 godina</option>
+                <option value="9-11">9-11 godina</option>
+                <option value="12+">12+ godina</option>
+            </select>
+        </div>
+
+        <div class="lista-radionica">
+            <div class="stavka-radionice uzrast-6-8">
+                <div class="slika-radionice">slika</div>
+                <div class="detalji-radionice">
+                    <span class="tekst">tekst radionice 1 (za 6-8 godina)</span>
+                    <a href="#" class="gumb" data-radionica="Radionica 1 - 6-8 god.">Prijavi</a>
+                </div>
+            </div>
+            
+            <div class="stavka-radionice uzrast-9-11">
+                <div class="slika-radionice">slika</div>
+                <div class="detalji-radionice"> <span class="tekst">tekst radionice 2 (za 9-11 godina)</span>
+                    <a href="#" class="gumb" data-radionica="Radionica 2 - 9-11 god.">Prijavi</a>
+                </div>
+            </div>
+            
+            <div class="stavka-radionice uzrast-12+">
+                <div class="slika-radionice">slika</div>
+                <div class="detalji-radionice">
+                    <span class="tekst">tekst radionice 3 (za 12+ godina)</span>
+                    <a href="#" class="gumb" data-radionica="Radionica 3 - 12+ god.">Prijavi</a>
+                </div>
+            </div>
+            
+            <div class="stavka-radionice uzrast-6-8">
+                <div class="slika-radionice">slika</div>
+                <div class="detalji-radionice">
+                    <span class="tekst">tekst radionice 4 (za 6-8 godina)</span>
+                    <a href="#" class="gumb" data-radionica="Radionica 4 - 6-8 god.">Prijavi</a>
+                </div>
+            </div>
+            
+            <div class="stavka-radionice uzrast-9-11">
+                <div class="slika-radionice">slika</div>
+                <div class="detalji-radionice">
+                    <span class="tekst">tekst radionice 5 (za 9-11 godina)</span>
+                    <a href="#" class="gumb" data-radionica="Radionica 5 - 9-11 god.">Prijavi</a>
+                </div>
+            </div>
+            
+            <div class="stavka-radionice uzrast-12+">
+                <div class="slika-radionice">slika</div>
+                <div class="detalji-radionice">
+                    <span class="tekst">tekst radionice 6 (za 12+ godina)</span>
+                    <a href="#" class="gumb" data-radionica="Radionica 6 - 12+ god.">Prijavi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterUzrasta = document.getElementById('filter-uzrasta');
+            const stavkeRadionica = document.querySelectorAll('.stavka-radionice');
+
+            filterUzrasta.addEventListener('change', function() {
+                const odabraniUzrast = this.value; // Dohvati odabranu vrijednost iz drop-downa
+
+                stavkeRadionica.forEach(function(radionica) {
+                    // Provjeri ima li radionica klasu koja odgovara odabranom uzrastu
+                    // Ako je odabraniUzrast prazan (Svi uzrasti), prikaži sve radionice
+                    if (odabraniUzrast === "" || radionica.classList.contains('uzrast-' + odabraniUzrast)) {
+                        radionica.style.display = 'flex'; // Prikazi radionicu
+                    } else {
+                        radionica.style.display = 'none'; // Sakrij radionicu
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
